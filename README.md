@@ -27,7 +27,10 @@ curl -fsSL https://raw.githubusercontent.com/bitrixdock/bitrixdock/master/instal
 <details><summary>Ручная установка</summary>
 <p>
   
-## Ручная установка   
+## Ручная установка
+#### Добавление пользователя и группы www-data
+useradd www-data
+
 #### Зависимости   
 - Git  
 ```
@@ -49,7 +52,7 @@ cd /var/www/bitrix && \
 wget http://www.1c-bitrix.ru/download/scripts/bitrixsetup.php && \
 cd /var/www/ && \
 git clone https://github.com/bitrixdock/bitrixdock.git && \
-cd /var/ && chmod -R 775 www/ && chown -R root:www-data www/ && \
+cd /var/ && chmod -R 775 www/ && chown -R www-data:www-data www/ && \
 cd /var/www/bitrixdock
 ```
 
